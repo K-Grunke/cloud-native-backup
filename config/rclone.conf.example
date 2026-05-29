@@ -1,0 +1,7 @@
+[minio_local]
+type = s3
+provider = Minio
+env_auth = false
+access_key_id = admin_chmury
+secret_access_key = ---wpisz_swoje_haslo_do_chmury---
+endpoint = http://localhost:9000
