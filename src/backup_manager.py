@@ -35,7 +35,7 @@ def create_backup():
 
         #wysłanie do chmury przez rclone (konfiguracja przez plik lokalny rclone.conf - należy wpisać swoją ścieżkę do tego pliku)
         logging.info("Transfer skompresowanego pliku do chmury MinIO...")
-        rclone_comm = f"rclone --config /---wprowadz_swoja_sciezke_do_rclone.conf---/ copy {gz_file_name} minio_local:moje-backupy/"
+        rclone_comm = f"rclone --config /wprowadz_swoja_sciezke/rclone.conf copy {gz_file_name} minio_local:moje-backupy/"
         subprocess.run(rclone_comm, shell = True, check = True)
 
         #usunięcie starych plików lokalnych
